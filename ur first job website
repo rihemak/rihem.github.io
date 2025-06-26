@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Professional Site - Rihem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    header, section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s forwards;
+    }
+    header {
+      animation-delay: 0.2s;
+      text-align: center;
+    }
+    header img {
+      max-width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    section:nth-of-type(1) { animation-delay: 0.4s; }
+    section:nth-of-type(2) { animation-delay: 0.6s; }
+    section:nth-of-type(3) { animation-delay: 0.8s; }
+    section:nth-of-type(4) { animation-delay: 1s; }
+
+    nav {
+      background-color: #0b3d91;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ffcc00;
+    }
+    h1, h2, h3 {
+      color: #0b3d91;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li::before {
+      content: '✔️ '; 
+    }
+    .contact a {
+      color: #0b3d91;
+      text-decoration: none;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+    button {
+      background-color: #0b3d91;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #092c6c;
+    }
+
+    .project-gallery {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .project-gallery img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .project-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      header, section {
+        padding: 40px 15px;
+      }
+      .project-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
+  </nav>
+
+  <header>
+    <img src="https://via.placeholder.com/150" alt="Rihem's Profile Photo">
+    <h1>Welcome, I'm Rihem</h1>
+    <p>This is a simple idea to make your first professional website. I built and deployed this myself using GitHub Pages!</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am Rihem, working in the field of [Your Field] for over [X] years. I believe that thoughtful creative work can make a real difference.</p>
+    <h3>Skills:</h3>
+    <ul>
+      <li>[Skill 1]</li>
+      <li>[Skill 2]</li>
+      <li>[Software/Tool]</li>
+      <li>[Additional Skill]</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p>Some of my previous work:</p>
+    <div class="project-gallery">
+      <img src="https://via.placeholder.com/280x180" alt="Project 1">
+      <img src="https://via.placeholder.com/280x180" alt="Project 2">
+      <img src="https://via.placeholder.com/280x180" alt="Project 3">
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>My Services</h2>
+    <ul>
+      <li>🔹 [Service 1] – [Short description]</li>
+      <li>🔹 [Service 2]</li>
+      <li>🔹 Custom services upon request</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>WhatsApp: <a href="https://wa.me/213XXXXXXXXX">+213XXXXXXXXX</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+    </div>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section id="blog">
+    <h2>Blog (Optional)</h2>
+    <p>Follow my posts on professional development, tips from experience, and inspiring success stories.</p>
+  </section>
+</body>
+</html>
